@@ -1,5 +1,7 @@
 /* ----- CSS Demo ----- */
 
+
+
 /*  ---------------Box Sizing-----------------  */
 
 html {
@@ -11,7 +13,43 @@ html {
     box-sizing: inherit;
   }
 
-  /* ------------- Global Styles --------------- */
+  /* ----------------Responsive Images -----------------*/
+img{
+  max-width: 100%;
+}
+/* ---------- Utility Classes -------------- */
+
+.container{
+  max-width: 960px;
+  width: 80vw;
+  margin: 40px auto;
+}
+
+.img-right{
+  float:right;
+  margin: 10px 0 10px 20px;
+  border: 1px solid #231942;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+.img-left{
+  float:left;
+  margin: 10px 20px 10px 0px;
+  border: 1px solid #231942;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+.img-center{
+  display: block;
+  margin: 20px auto;
+  border: 1px solid #231942;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+/* ------------- Global Styles --------------- */
 
   body{
     background:#fff2fc;
@@ -20,10 +58,10 @@ html {
   }
 
   header.primary{
-    background: #5e548e;
+    background: #231942;
     color: #fff2fc;
     text-align: center;
-    text-shadow: 2px 2px #231942;
+    text-shadow: 2px 2px #000000;
     padding: 30px;
   }
   
@@ -61,13 +99,168 @@ html {
   header.primary nav a {
     color: #fff2fc;
     text-decoration: none;
-    background-color: rgba(35, 25, 66, 0.5);
+    background-color: rgba(190, 149, 196, 0.5);
     padding: 7.5px 10px;
     border-radius: 20px;
-    border: 1px solid #c0c0c0;
+    border: 1px solid #fff2fc;
     transition: 0.4s;
   }
 
   header.primary nav a:hover{
-    background-color: rgba(35, 25, 66, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
   }
+
+  #content{
+    line-height:1.5;
+  }
+
+  #content h2{
+    color: #5e548e;
+    border-bottom: 3px dotted #be95c4;
+  }
+
+  #content h3{
+    color: #5e548e;
+    border-left: 5px solid #be95c4;
+    padding: 7.5px;
+  }
+
+  #blog{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2rem;
+    border-bottom:2px dotted #be95c4;
+    padding: 2rem 0;
+    border-top: 2px dotted #be95c4;
+    
+  }
+
+  #blog .post{
+    box-shadow: 0px 10px 15px 5px #9f88c0;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: .3s;
+
+  }
+
+  #blog figure{
+    margin: 5px;
+  }
+
+  #blog figcaption{
+    text-transform: uppercase;
+    font-size: .8rem;
+    text-align: center;
+    color: #e0b1cb;
+  }
+
+  #blog header{
+    padding-top: 10px;
+    font-size: .8rem;
+    color:#9f88c0
+  }
+
+  #blog header h2{
+    margin: 0;
+  }
+
+  #blog a{
+    color:#5e548e;
+  }
+
+  
+  #blog .post:hover{
+    box-shadow: 0px 20px 15px 10px #9f88c0;
+  }
+
+  #practice h2{
+    color: #5e548e;
+    border-bottom: 3px dotted #be95c4;
+  }
+
+  table{
+    border: 1px solid #9f88c0;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  caption{
+    font-weight: bold;
+    margin: 10px;
+  }
+
+  th{
+    background-color:#231942;
+    color: #f0d2e4;
+    padding: 8px;
+  }
+
+  tr:nth-child(even){
+    background:#f0d2e4;
+  }
+
+  td{
+    border: 1px solid #5e548e;
+    padding: 5px;
+  }
+
+
+  aside[role="complementary"]{
+    background-color: #231942;
+    color:#fff2fc;
+    padding:1.25rem;
+  }
+  
+  aside .container{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    gap:60px;
+  }
+  
+  aside .container a{
+      color:#9f88c0;
+  }
+  
+  aside .container a:last-of-type{
+    display:block;
+  
+    text-align:right;
+    margin-top: 1rem;
+  }
+  
+  aside .widget footer{
+    display:none;
+  }
+
+  #colophon{
+    background-color: #5e548e;
+    text-align: center;
+    padding: 10px;
+    color:#e0b1cb;
+    font-size: 1.1rem;
+  }
+
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width:600px) {
+    header.primary ul {
+      flex-direction: column;
+      gap:10px;
+
+  }
+  header.primary nav a{
+    display:block;
+    max-width:250px;
+    margin:auto;
+  }
+}
