@@ -1,0 +1,73 @@
+/* ----- CSS Demo ----- */
+
+/*  ---------------Box Sizing-----------------  */
+
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  /* ------------- Global Styles --------------- */
+
+  body{
+    background:#fff2fc;
+    font-family: "Comfortaa", sans-serif;
+    margin:0
+  }
+
+  header.primary{
+    background: #5e548e;
+    color: #fff2fc;
+    text-align: center;
+    text-shadow: 2px 2px #231942;
+    padding: 30px;
+  }
+  
+  header.primary h1{
+    font-size: 2.4rem;
+    margin: 10px 0 0;
+  }
+
+  header.primary h1 a{
+    color:#fff2fc;
+    text-decoration: none;
+  }
+
+  header.primary h2{
+    margin: 0;
+    font-size: 1.4rem;
+  }
+
+  header.primary nav{
+    max-width: 900px;
+    margin: auto;
+  }
+
+  header.primary ul {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+  }
+
+  header.primary ul li{
+    list-style-type: none;
+  }
+
+  header.primary nav a {
+    color: #fff2fc;
+    text-decoration: none;
+    background-color: rgba(35, 25, 66, 0.5);
+    padding: 7.5px 10px;
+    border-radius: 20px;
+    border: 1px solid #c0c0c0;
+    transition: 0.4s;
+  }
+
+  header.primary nav a:hover{
+    background-color: rgba(35, 25, 66, 0.8);
+  }
