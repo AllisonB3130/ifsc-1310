@@ -1,7 +1,5 @@
 /* ----- CSS Demo ----- */
 
-
-
 /*  ---------------Box Sizing-----------------  */
 
 html {
@@ -14,9 +12,11 @@ html {
   }
 
   /* ----------------Responsive Images -----------------*/
+
 img{
   max-width: 100%;
 }
+
 /* ---------- Utility Classes -------------- */
 
 .container{
@@ -57,8 +57,13 @@ img{
     margin:0
   }
 
+  /* Background Example 
+  background: no-repeat center/50% url("../img/kitten.webp");
+  */
+
   header.primary{
-    background: #231942;
+    background-color: #231942;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%235e548e' fill-opacity='0.2' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     color: #fff2fc;
     text-align: center;
     text-shadow: 2px 2px #000000;
@@ -133,7 +138,14 @@ img{
     border-bottom:2px dotted #be95c4;
     padding: 2rem 0;
     border-top: 2px dotted #be95c4;
+    flex-wrap: wrap;
     
+  }
+
+  #blog h2 {
+    flex:0 0 100%;
+    margin: 0;
+    text-align: center;
   }
 
   #blog .post{
@@ -142,6 +154,7 @@ img{
     border-radius: 4px;
     font-size: 1rem;
     transition: .3s;
+    flex: 1;
 
   }
 
@@ -184,6 +197,7 @@ img{
     border: 1px solid #9f88c0;
     width: 100%;
     margin: 20px 0;
+    border-collapse: collapse;
   }
 
   caption{
@@ -198,12 +212,65 @@ img{
   }
 
   tr:nth-child(even){
-    background:#f0d2e4;
+    background: rgba(190, 149, 196, .3);
+  }
+
+  tr:hover{
+    background-color: rgba(159, 134, 192, .5);
   }
 
   td{
     border: 1px solid #5e548e;
     padding: 5px;
+  }
+
+  td:nth-child(n+2) {
+    text-align: right;
+  }
+
+  #practice ol{
+    color:#5e548e
+  }
+
+  #practice ul{
+    color:#5e548e;
+  }
+
+  #practice ul ul{
+    list-style-type: square;
+    color:#5e548e;
+  }
+
+  dl dt{
+    font-weight:bold;
+    color:#231942
+  }
+
+  dl dd{
+    margin: 10px;
+    color: #5e548e
+  }
+
+  dd + dt{
+    margin-top: 1rem;
+  }
+
+  #practice blockquote{
+    border: 4px double #231942;
+    padding: 20px 40px;
+    margin: 40px 80px;
+    border-radius: 15px 30px;
+    background-color: #5e548e;
+    color: #f0d2e4;
+    line-height: 1.4;
+    text-shadow: 1px 1px #231942
+  }
+
+  #practice blockquote cite{
+    display: block;
+    text-align: right;
+    font-size: .8rem;
+    margin-top: 1rem;
   }
 
 
